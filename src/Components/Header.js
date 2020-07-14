@@ -1,14 +1,21 @@
 import React from "react";
+import "./Header.css";
 
 const Header = ({ fetchPopular, fetchNewest, fetchTopRated }) => {
   console.log("rendering Header");
 
   return (
-    <div>
-      <button onClick={fetchPopular}>Popular</button>
-      <button onClick={fetchTopRated}>Top Rated</button>
-      <button onClick={fetchNewest}>Newest</button>
-    </div>
+    <header className="header">
+      <button onClick={fetchPopular} className="header-button">
+        Popular
+      </button>
+      <button onClick={fetchTopRated} className="header-button">
+        Top Rated
+      </button>
+      <button onClick={fetchNewest} className="header-button">
+        Newest
+      </button>
+    </header>
   );
 };
 

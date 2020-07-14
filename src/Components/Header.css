@@ -1,0 +1,18 @@
+.header {
+  margin-bottom: 10px;
+  margin-top: 75px;
+  margin-left: 16px;
+}
+
+.header-button {
+  margin: 3px;
+  height: 35px;
+  background: aqua;
+  border: none;
+  border-radius: 7px;
+}
+
+.header-button:hover,
+.header-button:active {
+  background: aquamarine;
+}

@@ -1,12 +1,13 @@
 import React from "react";
+import "./Search.css";
 
 const Search = ({ input, onChange, onSubmit }) => {
   console.log("rendering Search");
 
   return (
-    <form onSubmit={onSubmit}>
-      <input value={input} onChange={onChange}></input>
-      <button>Search</button>
+    <form onSubmit={onSubmit} className="search">
+      <input value={input} onChange={onChange} className="search-input"></input>
+      <button className="search-button">Search</button>
     </form>
   );
 };

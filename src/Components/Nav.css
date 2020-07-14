@@ -1,0 +1,31 @@
+nav {
+  background: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav button {
+  height: 40px;
+  width: 100px;
+  background: red;
+  border: none;
+  border-radius: 7px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+nav button:hover,
+nav button:active {
+  background: orange;
+}
+
+#logo {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 16px;
+  color: black;
+}

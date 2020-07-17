@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Layout from "./Components/Layout";
+import Nav from "./Components/Nav";
 import Header from "./Components/Header";
 import Search from "./Components/Search";
 import Movies from "./Components/Movies";
@@ -26,6 +26,8 @@ function App() {
       )
         .then((response) => response.json())
         .then((data) => setShowing(data.results));
+    } else {
+      fetchPopular();
     }
   }, [input]);
 
@@ -86,18 +88,17 @@ function App() {
         <Switch>
           <Route path="/movie/:id" component={Movie}></Route>
           <Route path="/">
-            <Layout>
-              <Header
-                fetchPopular={fetchPopular}
-                fetchNewest={fetchNewest}
-                fetchTopRated={fetchTopRated}
-              />
-              <Search
-                input={input}
-                onChange={(event) => setInput(event.target.value)}
-              />
-              <Movies showing={showing} genreId={genreId} />
-            </Layout>
+            <Nav />
+            <Header
+              fetchPopular={fetchPopular}
+              fetchNewest={fetchNewest}
+              fetchTopRated={fetchTopRated}
+            />
+            <Search
+              input={input}
+              onChange={(event) => setInput(event.target.value)}
+            />
+            <Movies showing={showing} genreId={genreId} />
           </Route>
         </Switch>
       </BrowserRouter>

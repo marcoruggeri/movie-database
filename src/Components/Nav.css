@@ -23,6 +23,10 @@ nav button:active {
   background: orange;
 }
 
+nav button:focus {
+  outline: none;
+}
+
 #logo {
   display: inline-block;
   margin-top: 15px;

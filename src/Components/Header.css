@@ -16,3 +16,7 @@
 .header-button:active {
   background: aquamarine;
 }
+
+.header-button:focus {
+  outline: none;
+}

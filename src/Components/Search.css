@@ -19,3 +19,7 @@
 .search-button:active {
   background: aquamarine;
 }
+
+.search-button:focus {
+  outline: none;
+}

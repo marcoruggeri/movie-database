@@ -2,11 +2,10 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-  console.log("rendering Footer");
   return (
-    <div>
+    <footer>
       <p className="footer">Made by Marco</p>
-    </div>
+    </footer>
   );
 };
 

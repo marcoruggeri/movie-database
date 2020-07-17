@@ -1,3 +1,68 @@
-.main {
-  margin-top: 65px;
+.main-movie {
+  /* margin-top: 65px; */
+  margin: 125px;
+}
+
+.movie-container {
+  height: 800px;
+}
+
+.movie-image {
+  width: 33%;
+  float: left;
+  margin-right: 20px;
+}
+
+.various {
+  display: inline;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+}
+
+.tagline {
+  font-size: 1.3rem;
+}
+
+.score {
+  float: right;
+}
+
+.overview {
+  padding-top: 35px;
+  font-size: 1.2rem;
+}
+
+.runtime {
+  padding-top: 25px;
+}
+
+.release-date {
+  padding-top: 25px;
+}
+
+.movie-genre {
+  list-style: none;
+  display: inline-block;
+  padding-top: 25px;
+  padding-right: 10px;
+}
+
+.actors-container {
+  width: 100%;
+  margin: auto;
+}
+
+.actor {
+  width: 15%;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.actor-name {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
 }

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
-  console.log("rendering Nav");
-
   return (
     <nav>
       {/* <img src="" alt="Logo"></img> */}

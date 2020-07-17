@@ -8,7 +8,7 @@
   padding: 16px;
 }
 
-.title {
+.movies-title {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
@@ -19,6 +19,13 @@
 
 img {
   width: 100%;
+}
+
+.genre-list {
+  display: inline-block;
+  list-style-position: outside;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .score {

@@ -4,7 +4,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p className="footer">Made by Marco</p>
+      <a className="footer" href="https://github.com/marcoruggeri">
+        Made by Marco
+      </a>
     </footer>
   );
 };

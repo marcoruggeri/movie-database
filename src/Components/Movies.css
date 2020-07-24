@@ -1,20 +1,20 @@
 .movies {
-  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .movie {
-  display: inline-block;
-  width: 25%;
-  padding: 16px;
+  width: 20vw;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
 .movies-title {
   text-align: center;
-  font-size: 16px;
+  font-size: 2vw;
   font-weight: bold;
-}
-
-.movies a {
 }
 
 img {
@@ -23,17 +23,48 @@ img {
 
 .genre-list {
   display: inline-block;
-  list-style-position: outside;
   padding: 0;
-  margin-top: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 .score {
   font-weight: bold;
+  margin: 0;
+  padding-left: 7px;
+  padding-bottom: 7px;
 }
 
 .movie li {
   display: inline-block;
   padding-right: 5px;
   font-style: italic;
+}
+
+.pagination {
+  width: 30%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.page-list {
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.page {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .movie {
+    width: 40vw;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 7px;
+  }
 }

@@ -27,8 +27,6 @@ const Movie = (props) => {
     <>
       <Nav />
       <main className="main-movie">
-        {console.log("MOVIE", movie)}
-        {console.log("CREDITS", credits)}
         <div className="movie-container">
           {movie && (
             <>
@@ -39,7 +37,7 @@ const Movie = (props) => {
               ></img>
               <div className="various">
                 <h1 className="movie-title">{movie.title}</h1>
-                <span className="score">{movie.vote_average}</span>
+                <span className="movie-score">{movie.vote_average}</span>
                 <h3 className="tagline">{movie.tagline}</h3>
                 <p className="overview">{movie.overview}</p>
                 <p className="runtime">Runtime: {movie.runtime}'</p>

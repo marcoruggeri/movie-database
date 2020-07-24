@@ -9,7 +9,7 @@ const Nav = () => {
       <Link to="/">
         <span id="logo">MovieDB</span>
       </Link>
-      <button>Sign in</button>
+      {/* <button>Sign in</button> */}
     </nav>
   );
 };

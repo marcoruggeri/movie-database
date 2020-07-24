@@ -32,4 +32,5 @@ nav button:focus {
   margin-top: 15px;
   margin-left: 16px;
   color: black;
+  font-weight: bold;
 }

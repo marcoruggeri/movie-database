@@ -1,3 +1,6 @@
 .footer {
   text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
 }

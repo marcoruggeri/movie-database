@@ -3,10 +3,13 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <a className="footer" href="https://github.com/marcoruggeri">
-        Made by Marco
-      </a>
+    <footer className="footer">
+      <p class="footer-p">
+        Made by{" "}
+        <a className="link" href="http://www.marcoruggeri.io">
+          Marco
+        </a>
+      </p>
     </footer>
   );
 };

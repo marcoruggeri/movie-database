@@ -10,14 +10,15 @@
 .search-button {
   height: 32px;
   margin-left: 4px;
-  background: aqua;
-  border: none;
+  background: white;
+  border: 2px solid black;
   border-radius: 7px;
 }
 
 .search-button:hover,
 .search-button:active {
-  background: aquamarine;
+  background: blue;
+  color: white;
 }
 
 .search-button:focus {

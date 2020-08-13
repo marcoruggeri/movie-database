@@ -21,7 +21,7 @@ const Movie = (props) => {
       .then((response) => response.json())
       .then((data) => setCredits(data))
       .catch((error) => console.log(error));
-  });
+  }, [props.match.params.id]);
 
   return (
     <>
@@ -54,22 +54,21 @@ const Movie = (props) => {
             </>
           )}
         </div>
+        <p className="actors-title">Actors</p>
         <div className="actors-container">
-          <ul className="actors">
-            {credits &&
-              credits.cast
-                .filter((actor) => actor.profile_path)
-                .slice(0, 10)
-                .map((actor) => (
-                  <li key={actor.id} className="actor">
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
-                      alt="actor"
-                    ></img>
-                    <span className="actor-name">{actor.name}</span>
-                  </li>
-                ))}
-          </ul>
+          {credits &&
+            credits.cast
+              .filter((actor) => actor.profile_path)
+              .slice(0, 10)
+              .map((actor) => (
+                <div key={actor.id} className="actor">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
+                    alt="actor"
+                  ></img>
+                  <p className="actor-name">{actor.name}</p>
+                </div>
+              ))}
         </div>
       </main>
       <Footer />

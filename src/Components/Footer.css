@@ -1,6 +1,14 @@
-.footer {
+.footer-p {
   text-align: center;
-  display: block;
+  margin: 20px;
+}
+
+.link {
   text-decoration: none;
   color: black;
+}
+
+.link:hover,
+.link:active {
+  color: blue;
 }

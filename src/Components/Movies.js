@@ -4,7 +4,7 @@ import "./Movies.css";
 
 import Footer from "./Footer";
 
-const Movies = ({ showing, genreId, pages, currentQuery, fetchApp }) => {
+const Movies = ({ showing, genreId, pages, loadMore }) => {
   let pagesArray = [];
   for (let i = 1; i <= pages; i++) {
     pagesArray.push(i);
@@ -29,7 +29,7 @@ const Movies = ({ showing, genreId, pages, currentQuery, fetchApp }) => {
                     ></img>
                   </Link>
                   <ul className="genre-list">
-                    {movie.genre_ids.map((genreID) => (
+                    {movie.genre_ids.slice(0, 2).map((genreID) => (
                       <li key={genreID}>
                         {Object.keys(genreId)
                           .filter((genre) => genreID === genreId[genre].id)
@@ -42,15 +42,9 @@ const Movies = ({ showing, genreId, pages, currentQuery, fetchApp }) => {
               )
           )}
       </div>
-      <div className="pagination">
-        <ul className="page-list">
-          {pagesArray.slice(0, 10).map((page) => (
-            <li className="page" key={page} onClick={() => fetchApp(page)}>
-              {page}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <button className="loadMore" onClick={loadMore}>
+        Load More
+      </button>
       <Footer />
     </>
   );

@@ -7,14 +7,15 @@
 .header-button {
   margin: 3px;
   height: 35px;
-  background: aqua;
-  border: none;
+  background: white;
+  border: 2px solid black;
   border-radius: 7px;
 }
 
 .header-button:hover,
 .header-button:active {
-  background: aquamarine;
+  background: blue;
+  color: white;
 }
 
 .header-button:focus {

@@ -13,6 +13,7 @@ function App() {
   const [genreId, setGenreId] = useState([]);
   const [currentQuery, setCurrentQuery] = useState("");
   const [pages, setPages] = useState(0);
+  const [loadMoreCounter, setLoadMoreCounter] = useState(2);
 
   useEffect(() => {
     fetchPopular();
@@ -95,10 +96,13 @@ function App() {
       .catch((error) => console.log(error));
   };
 
-  const fetchApp = (page) => {
-    fetch(`${currentQuery}&page=${page}`)
+  const loadMore = () => {
+    fetch(`${currentQuery}&page=${loadMoreCounter}`)
       .then((response) => response.json())
-      .then((data) => setShowing(data.results))
+      .then((data) => {
+        setShowing((prev) => [...prev, ...data.results]);
+        setLoadMoreCounter((prev) => prev + 1);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -122,8 +126,7 @@ function App() {
               showing={showing}
               genreId={genreId}
               pages={pages}
-              currentQuery={currentQuery}
-              fetchApp={fetchApp}
+              loadMore={loadMore}
             />
           </Route>
         </Switch>
